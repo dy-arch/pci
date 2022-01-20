@@ -38,4 +38,6 @@ jobs: # 실제 돌아갈 동작
         node-version: [12.x, 14.x, 16.x]
 
     steps:
+      - run: npm ci
+      - run: npm run build --if-present
       - run: npm test
